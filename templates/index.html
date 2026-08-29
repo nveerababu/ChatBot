@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <title>ChatBot</title>
+</head>
+<body>
+    <div class="page-container">
+        <div class="robot-side">
+            <img src="{% static 'images/chatbot_robot.png' %}" alt="robot" class="robot-img">
+        </div>
+
+        <div class="content-side">
+            <a href="/history">
+                <button class="btn btn-primary">Search History<br>
+                <i class="fa-solid fa-clock-rotate-left" style="font-size: 25px;"></i>
+                </button>
+            </a>
+
+            <h1>WELCOME TO SAGEBOT</h1>
+
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Ask Me<br>
+                <i class="fa-solid fa-hand-pointer" style="font-size: 32px";></i>
+                </button>
+            </form>
+
+            {% if response %}
+            <div class="answer-box">
+           <h3>✨ Answer:</h3>
+            <div class="response-text">
+              {{ response|linebreaks }}
+         </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>

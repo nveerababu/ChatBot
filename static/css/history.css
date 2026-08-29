@@ -1,0 +1,50 @@
+.robot-img {
+  width: 200px;
+  position: absolute;
+  left: 40px;
+  top: 100px;
+}
+body {
+    background: #1e293b;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+    padding-top: 40px;
+    position: relative;
+    min-height: 100vh;
+}
+
+h1 {
+    display: inline-block;        
+    border-bottom: 3px double orange; 
+}        
+
+h3 { 
+    display: inline-block;        
+    border-bottom: 3px double orange; 
+}
+
+table {
+    margin: 20px auto;  
+    width: 60%;          
+    border-collapse: collapse;
+}
+
+th {
+    color: orange;
+}
+
+th, td {
+    padding: 12px 15px;  
+    text-align: center;
+}
+button {
+    background-color: green;
+    color: white;
+    width: 140px;
+    padding: 3px;
+    border-radius: 10px;
+    
+
+} 

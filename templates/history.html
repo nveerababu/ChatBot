@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search History</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/history.css' %}" />
+</head>
+<body>
+
+    <!-- Back to Home Button -->
+    <a href="/" style="text-decoration: none;", class="back-btn">
+        <button class="btn btn-primary" type="button"><---Back To Home<br>
+        <i class="fa-solid fa-hand-back-point-left"></i>
+        </button>
+    </a> 
+    
+
+    {% if history_list %}
+        <h1>YOUR SEARCH HISTORY AVAILABLE HERE</h1><br>
+        <h3>TAKE A LOOK</h3>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Search History</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for history in history_list %}
+                <tr>
+                    <td>{{ history.Ask_A_Question }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <h1>YOU HAVEN'T SEARCHED ANYTHING YET</h1>
+    {% endif %}
+
+</body>
+</html>
