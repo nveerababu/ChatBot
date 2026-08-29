@@ -1,4 +1,4 @@
 django
 google-generativeai
 python-dotenv
-gunicorngit add requirements.txt ChatBot/settings.py
+gunicorn
