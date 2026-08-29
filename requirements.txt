@@ -2,3 +2,4 @@ django
 google-generativeai
 python-dotenv
 gunicorn
+whitenoise
